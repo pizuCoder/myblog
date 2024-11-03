@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+
+    <header>
+        <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+    </header>
+
+    <main class="post-content">
+        <article>
+            <h1>{{ .Title }}</h1>
+            <p>By {{ .Params.author }} | {{ .Date.Format "January 2, 2006" }}</p>
+            <div class="content">
+                {{ .Content }}
+            </div>
+        </article>
+
+        <!-- Sidebar for additional resources -->
+        <aside class="post-sidebar">
+            <h3>Additional Resources</h3>
+            <ul>
+                <li>Template 1</li>
+                <li>Template 2</li>
+                <li>Template 3</li>
+            </ul>
+        </aside>
+    </main>
+
+</body>
+</html>

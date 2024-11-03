@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    background-color: #f7f7f7;
+    padding: 1em;
+    text-align: center;
+}
+
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1em;
+}
+
+.post-list {
+    flex: 2;
+    padding: 1em;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 1em;
+    background-color: #f2f2f2;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.post-sidebar {
+    margin-top: 2em;
+}

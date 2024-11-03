@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1>{{ .Site.Title }}</h1>
+            <p>{{ .Site.Params.description }}</p>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="content-container">
+            <!-- Main Post List -->
+            <section class="post-list">
+                {{ range where .Site.RegularPages "Section" "post" }}
+                <article>
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <p>{{ .Summary }}</p>
+                </article>
+                {{ end }}
+            </section>
+
+            <!-- Sidebar for Recommended Posts -->
+            <aside class="sidebar">
+                <h3>Recommended posts</h3>
+                {{ range .Site.RegularPages }}
+                <div class="recommended-post">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </div>
+                {{ end }}
+            </aside>
+        </div>
+    </main>
+
+</body>
+</html>
